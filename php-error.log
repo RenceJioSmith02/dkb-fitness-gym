@@ -1,0 +1,415 @@
+[20-Aug-2025 23:19:31 Asia/Manila] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\term_project_php\db\request.php on line 57
+[20-Aug-2025 23:19:31 Asia/Manila] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\term_project_php\db\request.php on line 64
+[20-Aug-2025 23:31:46 Asia/Manila] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\term_project_php\db\request.php on line 57
+[20-Aug-2025 23:31:46 Asia/Manila] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\term_project_php\db\request.php on line 64
+[21-Aug-2025 11:55:32 Asia/Manila] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\term_project_php\db\request.php on line 57
+[21-Aug-2025 11:55:32 Asia/Manila] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\term_project_php\db\request.php on line 64
+[21-Aug-2025 22:09:31 Asia/Manila] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\term_project_php\db\request.php on line 57
+[21-Aug-2025 22:09:31 Asia/Manila] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\term_project_php\db\request.php on line 57
+[21-Aug-2025 22:28:49 Asia/Manila] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\term_project_php\db\request.php on line 57
+[21-Aug-2025 22:28:49 Asia/Manila] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\term_project_php\db\request.php on line 57
+[21-Aug-2025 22:30:26 Asia/Manila] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\term_project_php\db\request.php on line 57
+[21-Aug-2025 22:30:26 Asia/Manila] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\term_project_php\db\request.php on line 57
+[21-Aug-2025 22:32:31 Asia/Manila] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\term_project_php\db\request.php on line 56
+[21-Aug-2025 22:32:31 Asia/Manila] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\term_project_php\db\request.php on line 56
+[21-Aug-2025 22:34:15 Asia/Manila] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\term_project_php\db\request.php on line 56
+[21-Aug-2025 22:34:15 Asia/Manila] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\term_project_php\db\request.php on line 56
+[23-Aug-2025 18:51:22 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:541
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 541
+[23-Aug-2025 18:51:30 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:652
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 652
+[23-Aug-2025 18:56:28 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:552
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 552
+[23-Aug-2025 18:56:32 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:552
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 552
+[23-Aug-2025 18:56:32 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:552
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 552
+[23-Aug-2025 18:56:32 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:552
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 552
+[23-Aug-2025 18:56:33 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:552
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 552
+[23-Aug-2025 18:56:36 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:552
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 552
+[23-Aug-2025 18:58:43 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:668
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 668
+[23-Aug-2025 18:58:46 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:668
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 668
+[23-Aug-2025 19:01:26 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:668
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 668
+[23-Aug-2025 19:02:53 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:668
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 668
+[23-Aug-2025 19:02:55 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method myDB::rawQueryWithTypes() in C:\xampp\htdocs\Gym-ms\db\request.php:668
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Gym-ms\db\request.php on line 668
+[28-Aug-2025 22:35:08 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:35:08 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:35:08 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:35:08 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:35:16 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:35:16 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:35:29 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:35:29 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:35:59 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:35:59 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:35:59 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:35:59 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:37:32 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:37:32 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:37:32 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:37:32 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:37:34 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:37:34 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:37:34 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:37:34 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:37:45 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:37:45 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:38:24 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:38:24 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:38:24 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:38:24 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:11 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:11 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:11 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:11 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:13 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:14 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:25 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:25 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:25 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:25 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:25 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:41:25 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:11 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:11 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:12 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:12 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:12 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:12 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:12 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:12 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:13 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:13 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:13 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:13 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:13 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:13 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:13 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:13 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:14 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:14 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:20 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:20 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:20 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:20 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:20 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:20 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:20 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:20 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:20 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:42:20 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:47:44 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:47:44 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:47:44 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:47:44 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:47:45 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:47:45 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:47:45 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:47:45 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:48:05 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:48:05 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:48:05 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:48:05 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:48:13 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:48:13 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:48:14 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:48:14 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:48:14 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:48:14 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:50:29 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:50:29 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:50:30 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:50:30 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:50:34 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:50:34 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:52:44 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:52:44 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:52:54 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:52:54 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:55:10 Asia/Manila] PHP Warning:  require_once(../assets/phpqrcode/qrlib.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[28-Aug-2025 22:55:10 Asia/Manila] PHP Fatal error:  Uncaught Error: Failed opening required '../assets/phpqrcode/qrlib.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 19
+[29-Aug-2025 13:56:13 Asia/Manila] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 750
+[29-Aug-2025 13:56:13 Asia/Manila] PHP Fatal error:  Uncaught ValueError: mysqli_stmt::bind_param(): Argument #1 ($types) must only contain the "b", "d", "i", "s" type specifiers in C:\xampp\htdocs\dkb-fitness-gym\db\db.php:45
+Stack trace:
+#0 C:\xampp\htdocs\dkb-fitness-gym\db\db.php(45): mysqli_stmt->bind_param('Nss', NULL, '2025-08-29 13:5...', '0000-00-00 00:0...')
+#1 C:\xampp\htdocs\dkb-fitness-gym\db\request.php(762): myDB->insert('users_log', Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\db.php on line 45
+[29-Aug-2025 13:56:14 Asia/Manila] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 750
+[29-Aug-2025 13:56:14 Asia/Manila] PHP Fatal error:  Uncaught ValueError: mysqli_stmt::bind_param(): Argument #1 ($types) must only contain the "b", "d", "i", "s" type specifiers in C:\xampp\htdocs\dkb-fitness-gym\db\db.php:45
+Stack trace:
+#0 C:\xampp\htdocs\dkb-fitness-gym\db\db.php(45): mysqli_stmt->bind_param('Nss', NULL, '2025-08-29 13:5...', '0000-00-00 00:0...')
+#1 C:\xampp\htdocs\dkb-fitness-gym\db\request.php(762): myDB->insert('users_log', Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\db.php on line 45
+[29-Aug-2025 13:59:02 Asia/Manila] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 750
+[29-Aug-2025 13:59:02 Asia/Manila] PHP Fatal error:  Uncaught ValueError: mysqli_stmt::bind_param(): Argument #1 ($types) must only contain the "b", "d", "i", "s" type specifiers in C:\xampp\htdocs\dkb-fitness-gym\db\db.php:45
+Stack trace:
+#0 C:\xampp\htdocs\dkb-fitness-gym\db\db.php(45): mysqli_stmt->bind_param('Nss', NULL, '2025-08-29 13:5...', '0000-00-00 00:0...')
+#1 C:\xampp\htdocs\dkb-fitness-gym\db\request.php(762): myDB->insert('users_log', Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\db.php on line 45
+[29-Aug-2025 13:59:04 Asia/Manila] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 750
+[29-Aug-2025 13:59:04 Asia/Manila] PHP Fatal error:  Uncaught ValueError: mysqli_stmt::bind_param(): Argument #1 ($types) must only contain the "b", "d", "i", "s" type specifiers in C:\xampp\htdocs\dkb-fitness-gym\db\db.php:45
+Stack trace:
+#0 C:\xampp\htdocs\dkb-fitness-gym\db\db.php(45): mysqli_stmt->bind_param('Nss', NULL, '2025-08-29 13:5...', '0000-00-00 00:0...')
+#1 C:\xampp\htdocs\dkb-fitness-gym\db\request.php(762): myDB->insert('users_log', Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\db.php on line 45
+[29-Aug-2025 13:59:06 Asia/Manila] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 750
+[29-Aug-2025 13:59:06 Asia/Manila] PHP Fatal error:  Uncaught ValueError: mysqli_stmt::bind_param(): Argument #1 ($types) must only contain the "b", "d", "i", "s" type specifiers in C:\xampp\htdocs\dkb-fitness-gym\db\db.php:45
+Stack trace:
+#0 C:\xampp\htdocs\dkb-fitness-gym\db\db.php(45): mysqli_stmt->bind_param('Nss', NULL, '2025-08-29 13:5...', '0000-00-00 00:0...')
+#1 C:\xampp\htdocs\dkb-fitness-gym\db\request.php(762): myDB->insert('users_log', Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\db.php on line 45
+[29-Aug-2025 13:59:24 Asia/Manila] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 750
+[29-Aug-2025 13:59:24 Asia/Manila] PHP Fatal error:  Uncaught ValueError: mysqli_stmt::bind_param(): Argument #1 ($types) must only contain the "b", "d", "i", "s" type specifiers in C:\xampp\htdocs\dkb-fitness-gym\db\db.php:45
+Stack trace:
+#0 C:\xampp\htdocs\dkb-fitness-gym\db\db.php(45): mysqli_stmt->bind_param('Nss', NULL, '2025-08-29 13:5...', '0000-00-00 00:0...')
+#1 C:\xampp\htdocs\dkb-fitness-gym\db\request.php(762): myDB->insert('users_log', Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\db.php on line 45
+[29-Aug-2025 19:23:36 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function format() on bool in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:502
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 502
+[29-Aug-2025 19:24:01 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function format() on bool in C:\xampp\htdocs\dkb-fitness-gym\db\request.php:502
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 502
+[29-Aug-2025 20:09:37 Asia/Manila] PHP Warning:  Undefined array key "user_gender" in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 484
+[30-Aug-2025 08:23:54 Asia/Manila] PHP Warning:  Undefined array key "user_gender" in C:\xampp\htdocs\dkb-fitness-gym\db\request.php on line 484
