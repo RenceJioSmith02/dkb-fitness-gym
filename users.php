@@ -298,21 +298,21 @@ include_once 'partials/session.php'
                 <table id="membersTable">
                     <thead>
                         <tr>
-                            <th style="width: 50px;"><button type="button" class="sort-btn" data-column="no">No.</button></th>
-                            <th>Profile</th>
-                            <th style="width: 120px;"><button type="button" class="sort-btn" data-column="id">Member ID
+                            <th style="width: 80px;"><button type="button" class="sort-btn" data-column="no">No.</button></th>
+                            <th style="width: 100px;">Profile</th>
+                            <th><button type="button" class="sort-btn" data-column="id">Member ID
                                     <img src="./assets/images/system_image/svg/sorting-arrow.svg" class="sort-arrow" />
                                 </button></th>
-                            <th style="width: 250px;"><button type="button" class="sort-btn" data-column="name">Name
+                            <th style="width: 200px;"><button type="button" class="sort-btn" data-column="name">Name
                                     <img src="./assets/images/system_image/svg/sorting-arrow.svg" class="sort-arrow" />
                                 </button></th>
-                            <th style="width: 120px;"><button type="button" class="sort-btn" data-column="height">Height (cm)
+                            <th><button type="button" class="sort-btn" data-column="height">Height (cm)
                                     <img src="./assets/images/system_image/svg/sorting-arrow.svg" class="sort-arrow" />
                                 </button></th>
-                            <th style="width: 120px;"><button type="button" class="sort-btn" data-column="weight">Weight (kg)
+                            <th><button type="button" class="sort-btn" data-column="weight">Weight (kg)
                                     <img src="./assets/images/system_image/svg/sorting-arrow.svg" class="sort-arrow" />
                                 </button></th>
-                            <th style="width: 120px;"><button type="button" class="sort-btn" data-column="birthday">Birthday
+                            <th><button type="button" class="sort-btn" data-column="birthday">Birthday
                                     <img src="./assets/images/system_image/svg/sorting-arrow.svg" class="sort-arrow" />
                                 </button></th>
                             <th><button type="button" class="sort-btn" data-column="gender">Gender
@@ -321,11 +321,11 @@ include_once 'partials/session.php'
                             <th><button type="button" class="sort-btn" data-column="address">Address
                                     <img src="./assets/images/system_image/svg/sorting-arrow.svg" class="sort-arrow" />
                                 </button></th>
-                            <th style="width: 120px;"><button type="button" class="sort-btn" data-column="contact">Contact
+                            <th><button type="button" class="sort-btn" data-column="contact">Contact
                                     <img src="./assets/images/system_image/svg/sorting-arrow.svg" class="sort-arrow" />
                                 </button></th>
-                            <th style="width: 250px;">Email</th>
-                            <th style="width: 120px;"><button type="button" class="sort-btn" data-column="membership">Membership
+                            <th style="width: 180px;">Email</th>
+                            <th><button type="button" class="sort-btn" data-column="membership">Membership
                                     <img src="./assets/images/system_image/svg/sorting-arrow.svg" class="sort-arrow" />
                                 </button></th>
                             <th><button type="button" class="sort-btn" data-column="status">Status
@@ -398,19 +398,22 @@ include_once 'partials/session.php'
 
             datas.forEach(function (data) {
                 tBody += `<tr>`;
-                tBody += `<td style="width: 50px;">${cnt++}</td>`;
-                tBody += `<td><img src="assets/images/user_image/${data['user_image'] ?? 'default.png'}" 
-                    width="40" height="40" style="border-radius:50%;"></td>`;
-                tBody += `<td style="width: 120px;">${data['user_id']}-${currentYear}</td>`;
-                tBody += `<td style="width: 250px;">${data['user_fname']} ${data['user_mname'] ?? ''}. ${data['user_lname']} ${data['user_suffix'] ?? ''}</td>`;
-                tBody += `<td style="width: 120px;">${data['user_height'] ?? ''}cm</td>`;
-                tBody += `<td style="width: 120px;">${data['user_weight'] ?? ''}kg</td>`;
-                tBody += `<td style="width: 120px;">${data['user_birthday'] ?? ''}</td>`;
+                tBody += `<td style="width: 80px;">${cnt++}</td>`;
+                tBody += `
+                <td class="member-profile">
+                    <img src="assets/images/user_image/${data['user_image'] ?? 'default.png'}" 
+                        alt="Member Image" class="member-img">
+                </td>`;
+                tBody += `<td>${data['user_id']}-${currentYear}</td>`;
+                tBody += `<td style="width: 200px;">${data['user_fname']} ${data['user_mname'] ?? ''}. ${data['user_lname']} ${data['user_suffix'] ?? ''}</td>`;
+                tBody += `<td>${data['user_height'] ?? ''}cm</td>`;
+                tBody += `<td>${data['user_weight'] ?? ''}kg</td>`;
+                tBody += `<td>${data['user_birthday'] ?? ''}</td>`;
                 tBody += `<td>${data['user_gender'] ?? ''}</td>`;
                 tBody += `<td>${data['user_address'] ?? ''}</td>`;
-                tBody += `<td style="width: 120px;">${data['user_contact'] ?? ''}</td>`;
-                tBody += `<td style="width: 250px;">${data['user_email'] ?? ''}</td>`;
-                tBody += `<td style="width: 120px;">${data['mem_type'] ?? ''}</td>`;
+                tBody += `<td>${data['user_contact'] ?? ''}</td>`;
+                tBody += `<td style="width: 180px;">${data['user_email'] ?? ''}</td>`;
+                tBody += `<td >${data['mem_type'] ?? ''}</td>`;
                 tBody += `<td>${data['user_status'] ?? ''}</td>`;
                 tBody += `<td>
                             <a href="#" class="btn-table-solid" onclick="editMember(${data['user_id']}); return false;">Edit</a>
@@ -776,6 +779,8 @@ include_once 'partials/session.php'
         });
 
     </script>
+
+    <script type="text/javascript" src="assets/js/universal.js"></script>
 
 </body>
 

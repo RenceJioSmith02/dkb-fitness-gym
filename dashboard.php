@@ -195,16 +195,16 @@ include_once 'partials/session.php';
                         function getColor(value, filter) {
                             switch (filter) {
                                 case "daily":
-                                    if (value >= 25) return '#BC7500';   // high
-                                    if (value >= 15) return '#E59522';   // medium
+                                    if (value >= 50) return '#BC7500';   // high
+                                    if (value >= 25) return '#E59522';   // medium
                                     return '#FFEDD4';                    // low
                                 case "weekly":
                                     if (value >= 200) return '#BC7500';
                                     if (value >= 100) return '#E59522';
                                     return '#FFEDD4';
                                 case "monthly":
-                                    if (value >= 1000) return '#BC7500';
-                                    if (value >= 600) return '#E59522';
+                                    if (value >= 800) return '#BC7500';
+                                    if (value >= 500) return '#E59522';
                                     return '#FFEDD4';
                                 case "annual":
                                     if (value >= 10000) return '#BC7500';

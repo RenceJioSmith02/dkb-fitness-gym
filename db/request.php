@@ -172,16 +172,16 @@ try {
                     }
                 }
 
-                // Age validation (must be 12+)
+                // Age validation (must be 16+)
                 if (!empty($bday)) {
                     $birthDate = new DateTime($bday);
                     $today = new DateTime('now', new DateTimeZone('Asia/Manila'));
                     $age = $birthDate->diff($today)->y;
 
-                    if ($age < 12) {
+                    if ($age < 16) {
                         $response = [
                             "status" => "error",
-                            "message" => "Member must be at least 12 years old."
+                            "message" => "Member must be at least 17 years old."
                         ];
                         break;
                     }
@@ -590,12 +590,12 @@ try {
                                 $mail->isSMTP();
                                 $mail->Host = 'smtp.gmail.com';
                                 $mail->SMTPAuth = true;
-                                $mail->Username = 'verdidadany@gmail.com';  // Gmail
-                                $mail->Password = 'mdztjjukqulgblef';       // App password
+                                $mail->Username = 'baltazardakilakrissanto@gmail.com';  // Gmail
+                                $mail->Password = 'esnhbcgjguxwawbm';       // App password
                                 $mail->SMTPSecure = 'tls';                  // or 'ssl' if using 465
                                 $mail->Port = 587;                          // 587 for TLS, 465 for SSL
 
-                                $mail->setFrom('verdidadany@gmail.com', 'DKB Fitness Gym');
+                                $mail->setFrom('baltazardakilakrissanto@gmail.com', 'DKB Fitness Gym');
                                 $mail->isHTML(true);
 
                                 // Add recipient
@@ -607,11 +607,11 @@ try {
                                 // Email content
                                 $mail->Subject = "Your Monthly Subscription is About to Expire";
                                 $mail->Body = "
-                        <p>Hello <strong>{$user['user_fname']} {$user['user_lname']}</strong>,</p>
-                        <p>Your monthly subscription will expire on <strong>{$user['mem_end_date']}</strong>.</p>
-                        <p>Please renew your subscription to continue enjoying our services.</p>
-                        <p>Thank you!</p>
-                    ";
+                                                <p>Hello <strong>{$user['user_fname']} {$user['user_lname']}</strong>,</p>
+                                                <p>Your monthly subscription will expire on <strong>{$user['mem_end_date']}</strong>.</p>
+                                                <p>Please renew your subscription to continue enjoying our services.</p>
+                                                <p>Thank you!</p>
+                                            ";
 
                                 // Send email
                                 if ($mail->send()) {
@@ -722,7 +722,7 @@ try {
                 $total = $countRes[0]['total'] ?? 0;
 
                 // Paginated query
-                $sql = "SELECT l.*, u.user_fname, u.user_image, u.user_lname, m.mem_type
+                $sql = "SELECT l.*, u.user_fname, u.user_image, u.user_lname, m.*
                         FROM users_log l
                         JOIN users_user u ON u.user_id = l.user_id
                         JOIN users_membership m ON l.user_id = m.user_id
@@ -808,6 +808,24 @@ try {
                 } else {
                     $response = ["status" => "error", "message" => "Missing RFID code"];
                 }
+                break;
+
+
+            /* ---------------- Update expired memberships ---------------- */
+            case "update_expired_memberships":
+                $today = date("Y-m-d");
+
+                // Update all expired memberships
+                $sql = "UPDATE users_membership 
+                        SET mem_type = 'Walk-in' 
+                        WHERE mem_end_date <= ?";
+
+                $mydb->rawQuery($sql, [$today], "s");
+
+                $response = [
+                    "status" => "success",
+                    "message" => "Expired memberships updated to Walk-in"
+                ];
                 break;
 
 

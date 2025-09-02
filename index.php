@@ -24,6 +24,18 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
 
     <link rel="icon" href="assets/images/system_image/favicon.png" type="image/png">
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        td {
+            font-size: 16px;
+        }
+        #logsTable td:last-child {
+            font-size: 20px;
+            font-weight: 800;
+            text-align: left;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -35,7 +47,7 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
 
                 <div class="scanner-container flex flex-col jus-center">
                     <!-- RFID Hidden Input -->
-                    <input type="text" id="rfidInput" autofocus style="opacity:1; z-index: 999; position:absolute;">
+                    <input type="text" id="rfidInput" autofocus style="opacity:0; z-index: -999; position:absolute;">
 
                     <h2>Welcome!</h2>
 
@@ -92,13 +104,13 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
                     <table width="100%" id="logsTable">
                         <thead>
                             <tr>
-                                <th>
+                                <th style="width: 80px;">
                                     No.
                                 </th>
-                                <th>
+                                <th style="width: 100px;">
                                     Profile
                                 </th>
-                                <th>
+                                <th style="width: 250px;">
                                     <button type="button" class="sort-btn" data-column="member">
                                         Member <img src="./assets/images/system_image/svg/sorting-arrow.svg"
                                             class="sort-arrow" />
@@ -121,6 +133,9 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
                                         Membership Type <img src="./assets/images/system_image/svg/sorting-arrow.svg"
                                             class="sort-arrow" />
                                     </button>
+                                </th>
+                                <th>
+                                    Remaining Days
                                 </th>
                             </tr>
                         </thead>
@@ -214,6 +229,9 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
         let currentSort = { column: null, asc: true };
 
         function loadLogs(keyword = null) {
+
+            updateExpiredMemberships();
+
             let data = {};
             if (keyword === null || keyword === "") {
                 data = { action: "get_logs", page: currentLogPage };
@@ -231,30 +249,120 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
             });
         }
 
+        function updateExpiredMemberships() {
+            $.post("db/request.php", { action: "update_expired_memberships" }, function (res) {
+                let response = typeof res === "string" ? JSON.parse(res) : res;
+                if (response.status === "success") {
+                    console.log("Expired memberships updated successfully");
+                } else {
+                    console.warn("Membership update error:", response.message);
+                }
+            });
+        }
+
 
         // Render table
         function renderLogs(datas) {
             let tBody = "";
             let cnt = (currentLogPage - 1) * 15 + 1;
 
-            datas.forEach(d => {
-                tBody += `<tr>
-                    <td>${cnt++}</td>
-                    <td><img src="assets/images/user_image/${d.user_image ?? 'default.png'}" 
-                            width="40" height="40" style="border-radius:50%;"></td>
-                    <td>${d.user_fname} ${d.user_lname}</td>
-                    <td>${d.log_time_in ?? ''}</td>
-                    <td>${d.log_time_out ?? ''}</td>
-                    <td>${d.mem_type ?? ''}</td>
-                </tr>`;
+            // today at midnight (PH) for clean day diffs
+            const today = getTodayPH();
 
+            datas.forEach((d, index) => {
+                const endParts = getYMDParts(d.mem_end_date);
+                const remainingDays = endParts ? daysBetween(today, endParts) : 0;
+
+                const rowId = `remaining-${index}`;
+
+                tBody += `<tr>
+                        <td style="width: 80px;">${cnt++}</td>
+                        <td class="log-profile">
+                            <img src="assets/images/user_image/${d.user_image ?? 'default.png'}" 
+                                alt="Profile Image" class="log-img">
+                        </td>
+                        <td style="width: 250px;">${d.user_fname} ${d.user_lname}</td>
+                        <td>${d.log_time_in ?? ''}</td>
+                        <td>${d.log_time_out ?? ''}</td>
+                        <td>${d.mem_type ?? ''}</td>
+                        <td id="${rowId}">${remainingDays}</td>
+                    </tr>`;
             });
 
             if (datas.length === 0) {
-                tBody = `<tr><td colspan="6" style="text-align:center;">No logs found</td></tr>`;
+                tBody = `<tr><td colspan="7" style="text-align:center;">No logs found</td></tr>`;
             }
 
             $("#logTable").html(tBody);
+
+            // Animate: from end-of-month (of the mem_end_date month) down to remaining days
+            datas.forEach((d, index) => {
+                const endParts = getYMDParts(d.mem_end_date);
+                if (!endParts) return;
+
+                const remainingDays = daysBetween(today, endParts);
+                const el = document.getElementById(`remaining-${index}`);
+                if (!el) return;
+
+                // If expired or no remaining days, just show 0/no animation
+                if (remainingDays <= 0) {
+                    el.textContent = 0;
+                    return;
+                }
+
+                // Days in the month of the membership end date
+                const eomDays = daysInMonth(endParts.y, endParts.m);
+
+                // Ensure start >= end (for far future dates, start from remainingDays)
+                let start = Math.max(eomDays, remainingDays);
+                const end = remainingDays;
+
+                // quick, smooth animation regardless of gap size
+                const duration = 1000;
+                const steps = Math.max(1, start - end);
+                const stepTime = Math.max(10, Math.floor(duration / steps));
+
+                el.textContent = start;
+
+                const timer = setInterval(() => {
+                    start--;
+                    el.textContent = start;
+                    if (start <= end) clearInterval(timer);
+                }, stepTime);
+            });
+        }
+
+        /* ---------- Helpers ---------- */
+
+        // Return {y,m,d} from "YYYY-MM-DD" or "YYYY-MM-DD HH:MM:SS". Invalid/zero dates -> null
+        function getYMDParts(dateStr) {
+            if (!dateStr) return null;
+            const pure = String(dateStr).split(" ")[0]; // drop time if present
+            const [y, m, d] = (pure || "").split("-").map(n => parseInt(n, 10));
+            if (!y || !m || !d || y < 1900) return null;         // guard "0000-00-00" or invalid
+            return { y, m, d };
+        }
+
+        // Get today in Asia/Manila at 00:00
+        function getTodayPH() {
+            const now = new Date();
+            const ph = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Manila" }));
+            ph.setHours(0, 0, 0, 0);
+            return { y: ph.getFullYear(), m: ph.getMonth() + 1, d: ph.getDate() };
+        }
+
+        // Inclusive-ish day difference using UTC midnight math (avoids TZ pitfalls)
+        // Returns ceil of (end - start) in days, and 0 if negative.
+        function daysBetween(startYMD, endYMD) {
+            const a = Date.UTC(startYMD.y, startYMD.m - 1, startYMD.d);
+            const b = Date.UTC(endYMD.y, endYMD.m - 1, endYMD.d);
+            const diff = Math.ceil((b - a) / 86400000);
+            return Math.max(0, diff);
+        }
+
+        // Number of days in the given month (1-12)
+        function daysInMonth(y, m) {
+            return new Date(y, m, 0).getDate();
         }
 
 
@@ -352,7 +460,7 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
                         icon: "success",
                         title: "Success",
                         text: data.message,
-                        timer: 2000,
+                        timer: 10000,
                         showConfirmButton: false
                     });
                     $("#manualId").val("");
@@ -364,7 +472,8 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
                     Swal.fire({
                         icon: "error",
                         title: "Error",
-                        text: data.message
+                        text: data.message,
+                        timer: 10000,
                     });
                 }
             });
@@ -433,9 +542,10 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
                 e.target.classList.add("expanded");
             }
         });
-
+        
     </script>
 
+    <script type="text/javascript" src="assets/js/universal.js"></script>
 </body>
 
 </html>

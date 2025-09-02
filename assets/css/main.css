@@ -160,7 +160,7 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  /* max-width: 1920px; */
   height: 100vh;
   
   background-color: yellow;
@@ -283,6 +283,73 @@ table th:last-child {
 .table-container.log {
   height: calc(76vh - 90px);
 }
+
+
+/* =========================members table =========================*/
+
+#membersTable td.member-profile {
+    width: 100px;
+    text-align: center;
+}
+
+#membersTable .member-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#membersTable .member-img:hover {
+    transform: scale(1.1);
+}
+
+/* =========================logs table =========================*/
+
+/* Profile cell */
+#logsTable td.log-profile {
+    width: 100px;
+    text-align: center;
+}
+
+/* Small image in table */
+#logsTable .log-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#logsTable .log-img:hover {
+    transform: scale(1.1);
+}
+
+/* Overlay */
+.img-overlay {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Previewed image */
+.img-overlay img {
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+}
+
+
 
 /* =========================
    pagination
@@ -672,7 +739,7 @@ table th:last-child {
 }
 
 .left .scanner-container .logo-container img {
-  width: 250px;
+  width: 280px;
 }
 .left .login-container .logo-container img {
   width: 150px;
@@ -776,7 +843,7 @@ table th:last-child {
 header {
   z-index: 100;
   width: 100%;
-  max-width: 1920px;
+  /* max-width: 1920px; */
   padding: 10px 50px;
   color: var(--dirty-white);
   background-color: var(--matt-black);
@@ -921,7 +988,7 @@ header .links {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.25);
   width: 100%;
-  max-width: 100%;
+  max-width: 1920px;
   overflow-x: auto;
   display: flex;
   flex-direction: column;
