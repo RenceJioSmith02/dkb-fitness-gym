@@ -29,12 +29,12 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
         td {
             font-size: 16px;
         }
+
         #logsTable td:last-child {
             font-size: 20px;
             font-weight: 800;
             text-align: left;
         }
-
     </style>
 </head>
 
@@ -49,7 +49,6 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
                     <!-- RFID Hidden Input -->
                     <input type="text" id="rfidInput" autofocus style="opacity:0; z-index: -999; position:absolute;">
 
-                    <h2>Welcome!</h2>
 
                     <div class="logo-container flex flex-col jus-center al-center">
                         <img src="./assets/images/system_image/logo-nobg.png" alt="Logo">
@@ -157,9 +156,39 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
 
     </div>
 
+
+    <!-- User Card Overlay -->
+    <div id="userCardOverlay" class="user-card-overlay">
+        <div class="user-card-container">
+            <!-- Left Panel -->
+            <div class="user-card-left">
+                <img id="modalUserImg" src="" alt="User Image">
+                <h2 id="modalUserName"></h2>
+                <p id="modalUserType"></p>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="user-card-right">
+                <h3>Profile Details</h3>
+                <p><strong>Name:</strong> <span id="modalFullName"></span></p>
+                <p><strong>Gender:</strong> <span id="modalUserGender"></span></p>
+                <p><strong>Mobile Number:</strong> <span id="modalUserMobile"></span></p>
+                <p><strong>Email:</strong> <span id="modalUserEmail"></span></p>
+                <p><strong>Address:</strong> <span id="modalUserAddress"></span></p>
+                <p id="modalSubscription"></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <script type="text/javascript">
 
         $(document).ready(function () {
+
+            $("#userCardOverlay").hide();
+
             loadLogs();
 
             let triggeredDate = null;
@@ -261,6 +290,32 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
         }
 
 
+// Helper: format time string to 12-hour with am/pm
+function formatTo12HourPH(timeStr) {
+    if (!timeStr || timeStr === "0000-00-00 00:00:00") {
+        return "Not yet timed out";
+    }
+
+    // Extract only the HH:mm:ss part (in case the string includes date)
+    let timeOnly = timeStr.split(" ")[1] || timeStr;
+
+    let parts = timeOnly.split(":");
+    if (parts.length < 2) return timeStr;
+
+    let date = new Date();
+    date.setHours(parseInt(parts[0], 10));
+    date.setMinutes(parseInt(parts[1], 10));
+    date.setSeconds(parts[2] ? parseInt(parts[2], 10) : 0);
+
+    return new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Manila",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+    }).format(date).toLowerCase();
+}
+
+
         // Render table
         function renderLogs(datas) {
             let tBody = "";
@@ -282,8 +337,9 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
                                 alt="Profile Image" class="log-img">
                         </td>
                         <td style="width: 250px;">${d.user_fname} ${d.user_lname}</td>
-                        <td>${d.log_time_in ?? ''}</td>
-                        <td>${d.log_time_out ?? ''}</td>
+<td>${formatTo12HourPH(d.log_time_in)}</td>
+<td>${formatTo12HourPH(d.log_time_out)}</td>
+
                         <td>${d.mem_type ?? ''}</td>
                         <td id="${rowId}">${remainingDays}</td>
                     </tr>`;
@@ -295,7 +351,7 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
 
             $("#logTable").html(tBody);
 
-            // Animate: from end-of-month (of the mem_end_date month) down to remaining days
+            // from end-of-month (of the mem_end_date month) down to remaining days
             datas.forEach((d, index) => {
                 const endParts = getYMDParts(d.mem_end_date);
                 if (!endParts) return;
@@ -351,7 +407,6 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
             return { y: ph.getFullYear(), m: ph.getMonth() + 1, d: ph.getDate() };
         }
 
-        // Inclusive-ish day difference using UTC midnight math (avoids TZ pitfalls)
         // Returns ceil of (end - start) in days, and 0 if negative.
         function daysBetween(startYMD, endYMD) {
             const a = Date.UTC(startYMD.y, startYMD.m - 1, startYMD.d);
@@ -455,29 +510,78 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
         function logRFID(tagId) {
             $.post("db/request.php", { action: "rfid_scan", user_rfid: tagId }, function (res) {
                 let data = typeof res === "string" ? JSON.parse(res) : res;
-                if (data.status === "success") {
-                    Swal.fire({
-                        icon: "success",
-                        title: "Success",
-                        text: data.message,
-                        timer: 10000,
-                        showConfirmButton: false
-                    });
-                    $("#manualId").val("");
 
+                if (data.status === "success") {
+                    if (data.user) {
+                        // Fill modal
+                        $("#modalUserImg").attr("src", "assets/images/user_image/" + data.user.user_image);
+                        $("#modalUserName").text(data.user.name);
+                        $("#modalFullName").text(data.user.name);
+                        $("#modalUserGender").text(data.user.gender || "N/A");
+                        $("#modalUserMobile").text(data.user.mobile || "N/A");
+                        $("#modalUserEmail").text(data.user.email || "N/A");
+                        $("#modalUserAddress").text(data.user.address || "N/A");
+
+                        if (data.user.mem_type === "Monthly") {
+                            $("#modalUserType").text("Monthly Member");
+                            $("#modalSubscription").html("<strong>Subscription:</strong> " + data.user.mem_start_date + " - " + data.user.mem_end_date);
+                        } else {
+                            $("#modalUserType").text("Walk-in Member");
+                            $("#modalSubscription").text("");
+                        }
+
+                        // Show modal
+                        $("#userCardOverlay").fadeIn();
+
+                        // Auto close after 10s
+                        setTimeout(() => { $("#userCardOverlay").fadeOut(); }, 15000);
+                    } else {
+                        // Fallback: Swal for checkout success, etc.
+                        Swal.fire({
+                            icon: "success",
+                            title: "Success",
+                            text: data.message,
+                            timer: 3000,
+                            showConfirmButton: false
+                        });
+                    }
+
+                    $("#manualId").val("");
                     let search = $("#searchInput").val().trim();
                     if (search) loadLogs(search);
                     else loadLogs();
+
                 } else {
                     Swal.fire({
                         icon: "error",
                         title: "Error",
                         text: data.message,
-                        timer: 10000,
+                        timer: 5000
                     });
                 }
             });
         }
+
+        // Close modal on overlay click
+        function closeUserCard() {
+            $("#userCardOverlay").fadeOut(function () {
+                // Reset content
+                $("#modalUserImg").attr("src", "");
+                $("#modalUserName, #modalFullName, #modalUserGender, #modalUserMobile, #modalUserEmail, #modalUserAddress, #modalUserType, #modalSubscription").text("");
+            });
+        }
+
+        // Auto close
+        setTimeout(closeUserCard, 15000);
+
+        // Close on overlay click
+        $(document).on("click", "#userCardOverlay", function (e) {
+            if (e.target.id === "userCardOverlay") {
+                closeUserCard();
+            }
+        });
+
+
 
         // =============================
         // Switch between Scanner & Login
@@ -542,7 +646,7 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
                 e.target.classList.add("expanded");
             }
         });
-        
+
     </script>
 
     <script type="text/javascript" src="assets/js/universal.js"></script>

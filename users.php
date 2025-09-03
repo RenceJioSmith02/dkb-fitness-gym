@@ -298,7 +298,8 @@ include_once 'partials/session.php'
                 <table id="membersTable">
                     <thead>
                         <tr>
-                            <th style="width: 80px;"><button type="button" class="sort-btn" data-column="no">No.</button></th>
+                            <th style="width: 80px;"><button type="button" class="sort-btn"
+                                    data-column="no">No.</button></th>
                             <th style="width: 100px;">Profile</th>
                             <th><button type="button" class="sort-btn" data-column="id">Member ID
                                     <img src="./assets/images/system_image/svg/sorting-arrow.svg" class="sort-arrow" />

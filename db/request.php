@@ -751,14 +751,22 @@ try {
                 if (!empty($_POST['user_rfid'])) {
                     $user_rfid = trim($_POST['user_rfid']);
 
-                    // Lookup user by RFID code
-                    $user = $mydb->select("users_user", "*", ["user_rfid" => $user_rfid]);
-                    if (!$user) {
+                    // Lookup user with membership info
+                    $sql = "
+                        SELECT u.*, m.mem_type, m.mem_start_date, m.mem_end_date
+                        FROM users_user u
+                        LEFT JOIN users_membership m ON u.user_id = m.user_id
+                        WHERE u.user_rfid = ?
+                        LIMIT 1
+                    ";
+                    $rows = $mydb->rawQuery($sql, [$user_rfid], "s");
+
+                    if (!$rows) {
                         $response = ["status" => "error", "message" => "Invalid RFID Card"];
                         break;
                     }
 
-                    $user = $user[0];
+                    $user = $rows[0];
                     $userId = $user['user_id'];
 
                     // Check today's log
@@ -776,7 +784,33 @@ try {
                             "log_time_in" => date("Y-m-d H:i:s"),
                             "log_time_out" => "0000-00-00 00:00:00"
                         ]);
-                        $response = ["status" => "success", "message" => "Check-in successful"];
+
+                        // Handle expired membership → force Walk-in
+                        $memType = $user['mem_type'] ?? "Walk-in";
+                        if ($memType === "Monthly" && !empty($user['mem_end_date'])) {
+                            if (strtotime($user['mem_end_date']) < strtotime($today)) {
+                                $memType = "Walk-in";
+                            }
+                        }
+
+                        $response = [
+                            "status" => "success",
+                            "message" => "Check-in successful",
+                            "user" => [
+                                "user_image" => $user['user_image'] ?? "default.png",
+                                "name" => $user['user_fname'] . " " .
+                                    ($user['user_mname'] ? $user['user_mname'][0] . " " : "") .
+                                    $user['user_lname'] . " " .
+                                    ($user['user_suffix'] ?? ""),
+                                "gender" => $user['user_gender'] ?? "",
+                                "mobile" => $user['user_contact'] ?? "",
+                                "email" => $user['user_email'] ?? "",
+                                "address" => $user['user_address'] ?? "",
+                                "mem_start_date" => $user['mem_start_date'] ?? "",
+                                "mem_end_date" => $user['mem_end_date'] ?? "",
+                                "mem_type" => $memType
+                            ]
+                        ];
                     } else {
                         $log = $existing[0];
 
@@ -797,6 +831,7 @@ try {
                             $mydb->update("users_log", [
                                 "log_time_out" => date("Y-m-d H:i:s")
                             ], ["log_id" => $log['log_id']]);
+
                             $response = ["status" => "success", "message" => "Check-out successful"];
                         } else {
                             $response = [
