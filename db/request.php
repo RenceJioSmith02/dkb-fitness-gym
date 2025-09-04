@@ -1052,31 +1052,59 @@ try {
                         AND (log_time_out IS NULL OR log_time_out = '0000-00-00 00:00:00')";
                 $mydb->rawQuery($sql, [$today]);
 
-                /* ------------------- EXPORT LOGS ------------------- */
-                $sql = "SELECT u.user_id, u.user_fname, u.user_lname, ul.log_time_in, ul.log_time_out
+
+                /* ------------------- EXPORT LOGS (Separated by Membership Type) ------------------- */
+                $sql = "SELECT u.user_id, u.user_fname, u.user_lname, m.mem_type, ul.log_time_in, ul.log_time_out
                         FROM users_log ul
                         JOIN users_user u ON ul.user_id = u.user_id
+                        LEFT JOIN users_membership m ON u.user_id = m.user_id
                         WHERE DATE(ul.log_time_in) = ?";
                 $rows = $mydb->rawQuery($sql, [$today]);
 
-                $logDir = __DIR__ . "/../csv/log_record/";
-                if (!is_dir($logDir))
-                    mkdir($logDir, 0777, true);
+                // Directories
+                $monthlyLogDir = __DIR__ . "/../csv/log_record/monthly/";
+                $walkinLogDir = __DIR__ . "/../csv/log_record/walk-in/";
 
-                $logFile = $logDir . (new DateTime("now", new DateTimeZone("Asia/Manila")))->format("M d, Y") . " - LOG REPORT.csv";
+                if (!is_dir($monthlyLogDir))
+                    mkdir($monthlyLogDir, 0777, true);
+                if (!is_dir($walkinLogDir))
+                    mkdir($walkinLogDir, 0777, true);
 
-                $fp = fopen($logFile, "w");
-                fputcsv($fp, ["User ID", "First Name", "Last Name", "Time In", "Time Out"]);
+                // File names
+                $todayLabel = (new DateTime("now", new DateTimeZone("Asia/Manila")))->format("M d, Y");
+                $monthlyFile = $monthlyLogDir . $todayLabel . " - MONTHLY LOG REPORT.csv";
+                $walkinFile = $walkinLogDir . $todayLabel . " - WALK-IN LOG REPORT.csv";
+
+                // Open files
+                $fpMonthly = fopen($monthlyFile, "w");
+                $fpWalkin = fopen($walkinFile, "w");
+
+                // Headers (added Membership Type)
+                fputcsv($fpMonthly, ["User ID", "First Name", "Last Name", "Membership Type", "Time In", "Time Out"]);
+                fputcsv($fpWalkin, ["User ID", "First Name", "Last Name", "Membership Type", "Time In", "Time Out"]);
+
+                // Separate rows by mem_type
                 foreach ($rows as $row) {
-                    fputcsv($fp, [
+                    $line = [
                         $row['user_id'],
                         $row['user_fname'],
                         $row['user_lname'],
+                        $row['mem_type'] ?: "Walk-in",
                         $row['log_time_in'],
                         $row['log_time_out']
-                    ]);
+                    ];
+
+                    if (strtolower($row['mem_type']) === "monthly") {
+                        fputcsv($fpMonthly, $line);
+                    } else {
+                        fputcsv($fpWalkin, $line);
+                    }
                 }
-                fclose($fp);
+
+                // Close files
+                fclose($fpMonthly);
+                fclose($fpWalkin);
+
 
                 /* ------------------- EXPORT USERS ------------------- */
                 $userRows = $mydb->select("users_user");
@@ -1116,7 +1144,8 @@ try {
                     "status" => "success",
                     "message" => "Users logged out and CSVs generated",
                     "files" => [
-                        "log" => "../csv/log_record/" . basename($logFile),
+                        "monthly_log" => "../csv/log_record/monthly/" . basename($monthlyFile),
+                        "walkin_log" => "../csv/log_record/walk-in/" . basename($walkinFile),
                         "users" => "../csv/users_record/" . basename($userFile),
                         "membership" => "../csv/membership_record/" . basename($memFile)
                     ]

@@ -1,5 +1,5 @@
 user_id,user_fname,user_mname,user_lname,user_suffix,user_email,user_height,user_weight,user_birthday,user_gender,user_address,user_contact,user_status,user_image,user_rfid
-1,"Niel Andrew",N,"De Guzman",,nielandreweguzman@gmail.com,167,55,2005-06-19,Male,Licaong,9297923332,inactive,default.png,123123123
+1,"Niel Andrew",N,"De Guzman",,nielandreweguzman@gmail.com,167,55,2005-06-19,Male,Licaong,9297923332,active,default.png,123123123
 2,Ardee,V,Daniel,,ardeev.daniel@gmail.com,171,82,2006-05-16,Male,"Brgy. Licaong, Science City of Munoz",9276717748,inactive,default.png,1262756050
 3,"Christian Jairus",,Sanchez,,christiabjairuz9@gmail.com,172,74,2005-10-21,Male,"BUKANG LIWAYWAY, SCM",9565912076,inactive,default.png,1260864194
 4,Cyy,,Biendima,,calyx15@ymail.com,163,65,1993-03-15,Female,"Abar 1st, San Jose City, Nueva Ecij",9278298540,inactive,default.png,711350788
@@ -26,7 +26,7 @@ user_id,user_fname,user_mname,user_lname,user_suffix,user_email,user_height,user
 25,"Klein Arjay",L,Candelario,,kleinarjaycandelario@gmail.com,158,56,2007-04-04,Male,"BAGONG SIKAT, SCM",9618491093,inactive,default.png,3871046916
 26,"Matt Calgae",S,Feria,,MATTFERIA777@GMAIL.COM,164,89,2003-12-03,Male,"ROSEVILLE, SAN JOSE CITY",9663992453,inactive,default.png,1887767469
 27,Daniel,T,Manuel,,LUZMANUEL5380@GMAIL.COM,183,85,2006-12-03,Male,"CLSU DORM 6",9916151104,inactive,default.png,3871361092
-28,"Rence Jio Smith",D,Bal-ot,,rennce.jio.smith@gmail.com,170,66,2004-03-02,Male,"LICAONG SCM",09534271345,inactive,28-j0yLzP.jpg,123
+28,"Rence Jio Smith",D,Bal-ot,,rennce.jio.smith@gmail.com,170,66,2004-03-02,Male,"LICAONG SCM",09534271345,active,28-j0yLzP.jpg,123
 29,Jason,Dc,Rabang,,rabangjason57@gmail.com,1722,78,2004-10-28,Male,"10 ZONE 1,ABAR 2ND,SJC, NE",9947323858,inactive,default.png,3959267625
 30,Jerico,L,Gammad,,JERICO.GAMMAD.05.03@GMAIL.COM,163,75,2003-11-05,Male,"BANTUG SCIENCE CITY OF MUNOZ, NE",9608398189,inactive,default.png,2060409485
 31,"Elijah Lee",,Marcelo,,gwenjoseelijah.marcelo@clsu2.edu.ph,511,79,2005-03-20,Male,"Zone 1, Sto Tomas, SJC",9455223937,inactive,default.png,2015431260
@@ -37,3 +37,4 @@ user_id,user_fname,user_mname,user_lname,user_suffix,user_email,user_height,user
 36,"Brian Reiley",,Santiago,,REILEY.SANTIAGO@GMAIL.COM,172,80,2002-12-07,Male,FRANZA,9294924603,inactive,default.png,3979370756
 37,Christopher,,Geranta,,CGGERANTA@GMAIL.COM,173,87,1998-12-04,Male,TALAVERA,9605832618,inactive,default.png,415506692
 38,Arnel,,Nueda,,ARNELNUEDA006@GMAIL.COM,175,73,1991-08-06,Male,CLSU,9563676153,inactive,default.png,479920388
+158,paem,paem,paem,paem,paem@g.com,180,72,2007-06-06,Male,paem,paem,inactive,default.png,123123123123

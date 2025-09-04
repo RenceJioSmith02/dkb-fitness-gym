@@ -290,30 +290,30 @@ if (isset($_SESSION['auth_id']) || isset($_SESSION['username'])) {
         }
 
 
-// Helper: format time string to 12-hour with am/pm
-function formatTo12HourPH(timeStr) {
-    if (!timeStr || timeStr === "0000-00-00 00:00:00") {
-        return "Not yet timed out";
-    }
+        // format time string to 12-hour with am/pm
+        function formatTo12HourPH(timeStr) {
+            if (!timeStr || timeStr === "0000-00-00 00:00:00") {
+                return "Not yet timed out";
+            }
 
-    // Extract only the HH:mm:ss part (in case the string includes date)
-    let timeOnly = timeStr.split(" ")[1] || timeStr;
+            // Extract only the HH:mm:ss part (in case the string includes date)
+            let timeOnly = timeStr.split(" ")[1] || timeStr;
 
-    let parts = timeOnly.split(":");
-    if (parts.length < 2) return timeStr;
+            let parts = timeOnly.split(":");
+            if (parts.length < 2) return timeStr;
 
-    let date = new Date();
-    date.setHours(parseInt(parts[0], 10));
-    date.setMinutes(parseInt(parts[1], 10));
-    date.setSeconds(parts[2] ? parseInt(parts[2], 10) : 0);
+            let date = new Date();
+            date.setHours(parseInt(parts[0], 10));
+            date.setMinutes(parseInt(parts[1], 10));
+            date.setSeconds(parts[2] ? parseInt(parts[2], 10) : 0);
 
-    return new Intl.DateTimeFormat("en-US", {
-        timeZone: "Asia/Manila",
-        hour: "numeric",
-        minute: "2-digit",
-        hour12: true
-    }).format(date).toLowerCase();
-}
+            return new Intl.DateTimeFormat("en-US", {
+                timeZone: "Asia/Manila",
+                hour: "numeric",
+                minute: "2-digit",
+                hour12: true
+            }).format(date).toLowerCase();
+        }
 
 
         // Render table
@@ -337,9 +337,8 @@ function formatTo12HourPH(timeStr) {
                                 alt="Profile Image" class="log-img">
                         </td>
                         <td style="width: 250px;">${d.user_fname} ${d.user_lname}</td>
-<td>${formatTo12HourPH(d.log_time_in)}</td>
-<td>${formatTo12HourPH(d.log_time_out)}</td>
-
+                        <td>${formatTo12HourPH(d.log_time_in)}</td>
+                        <td>${formatTo12HourPH(d.log_time_out)}</td>
                         <td>${d.mem_type ?? ''}</td>
                         <td id="${rowId}">${remainingDays}</td>
                     </tr>`;
